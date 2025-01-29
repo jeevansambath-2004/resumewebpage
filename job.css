@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #2f8a9a;
+}
+
+/* Fade-in effect for container */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    background-color: #e3808d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(243, 242, 244, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Bounce effect for profile image */
+.profile-image {
+    display:block;
+    justify-content: center;
+    margin-bottom: 50px;
+    animation: bounceIn 1s ease-in-out;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+/* Slide-in effect for sections */
+.experience, .skills {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Pulsing effect for footer */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #227892;
+    animation: pulse 1.5s infinite alternate ease-in-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.6;
+    }
+    to {
+        opacity: 1;
+    }
+}
